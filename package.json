@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "xmldoc": "1.0.0"
+  },
+  "renovate": {
+    "configMigration": true,
+    "customManagers": [
+     {
+       "customType": "regex",
+       "datasourceTemplate": "npm",
+       "depNameTemplate": "@biomejs/biome",
+       "fileMatch": [
+         "(^|/)biome.jsonc?$"
+       ],
+       "matchStrings": [
+         "\"https://biomejs.dev/schemas/(?<currentValue>[^\"]+)/schema.json\""
+       ]
+     }
+   ]
+ }
+}
